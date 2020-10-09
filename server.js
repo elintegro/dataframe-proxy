@@ -31,6 +31,12 @@ app.get('/dataframe/ajaxValues', (req, res) => {
 		const response = callApiGet(address, "GET", data, genericCallbackForApi);
 		response.then((resp) => {res.send(response.data);});
 })
+app.post('/dataframe/ajaxSave', (req, res) => {
+		const address = apiAddress + "/dataframe/ajaxSave";
+		const data = req.body;
+		const response = callApiGet(address, "POST", data, genericCallbackForApi);
+		response.then((resp) => {res.send(response.data);});
+})
 app.get('/login/getUserInfo', (req, res) => {
 		const address = apiAddress + "/login/getUserInfo";
 		const response = callApi(address, "GET", "", genericCallbackForApi);
