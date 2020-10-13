@@ -1,6 +1,7 @@
 {
   "hosting": {
-    "public": "public",
+			"site":"dfr-proxy",
+			"public": "functions/public",
     "ignore": [
       "firebase.json",
       "**/.*",

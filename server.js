@@ -1,6 +1,6 @@
 const express = require('express');
 const axios = require('axios');
-const i18nMessages = require('./public/javascript/i18Messages');
+const i18nMessages = require('./functions/public/javascript/i18Messages');
 
 const app = express();
 
@@ -18,7 +18,8 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + "/index.html");
 })
 
-const apiAddress = "http://localhost:8099";
+/*const apiAddress = "http://localhost:8099";*/
+const apiAddress = "https://qa.elintegro.com";
 app.get('/html', (req, res) => {
 		const address = apiAddress + "/getHtml";
 		const response = callApi(address, "GET", "", genericCallbackForApi);

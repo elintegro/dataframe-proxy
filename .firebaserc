@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "dataframe-proxy"
+    "default": "dataframe-proxy",
+    "dfr-proxy": "dataframe-proxy-dcaa9"
   }
 }
