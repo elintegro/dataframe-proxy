@@ -1,6 +1,6 @@
 {
   "hosting": {
-			"site":"dfr-proxy",
+			"site":"landingpageweb",
 			"public": "functions/public",
     "ignore": [
       "firebase.json",

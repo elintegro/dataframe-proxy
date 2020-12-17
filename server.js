@@ -1,6 +1,7 @@
+require("./functions/javascript/i18nMessages");
+
 const express = require('express');
 const axios = require('axios');
-const i18nMessages = require('./functions/public/javascript/i18Messages');
 
 const app = express();
 
@@ -52,7 +53,7 @@ app.post('/EmployeeApplication/initiateSkillSet', (req, res) => {
 })
 const genericCallbackForApi = (response) => {
 		console.log("Data recieved from server");
-		response.messages = i18nMessages.messages;
+		response.messages = i18messages
 		console.log(response);
 		return response;
 }
