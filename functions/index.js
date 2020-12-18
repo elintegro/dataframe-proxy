@@ -15,6 +15,10 @@ app.use("/assets", proxy(baseUrl, { // proxying assets to the main server
         }
     })
 );
+//For test
+app.get('/ping', (req, res) => { //test method to check if proxy is working
+    res.json({success: 'success ', msg:'ping succcessfull'});
+});
 app.get('/api', (req, res) => { //test method to check if proxy is working
     const date = new Date();
     const hours = (date.getHours() % 12) + 1;  // London is UTC + 1hr;
